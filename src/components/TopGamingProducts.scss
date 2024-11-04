@@ -1,0 +1,132 @@
+// Основные переменные
+$background-color: #0F0F10;
+$text-color: #FFFFFF;
+$accent-color: #FF1202;
+$secondary-text-color: #BBBBBB;
+
+.top-gaming-products {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 5%;
+  background-color: $background-color;
+  color: $text-color;
+
+  &__content {
+    max-width: 50%;
+  }
+
+  &__subtitle {
+    font-size: 2rem;
+    color: $accent-color;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  &__title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: $text-color;
+  }
+
+  &__description {
+    font-size: 1.2rem;
+    color: $secondary-text-color;
+    line-height: 1.6;
+    margin-bottom: 40px;
+  }
+
+  &__features {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+
+    .feature {
+      text-align: left;
+      max-width: 200px;
+
+      &__icon {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 10px;
+      }
+
+      &__title {
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: $text-color;
+        margin-bottom: 10px;
+      }
+
+      &__description {
+        font-size: 1rem;
+        color: $secondary-text-color;
+        line-height: 1.4;
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+
+    .top-gaming-products__button {
+      background-color: $accent-color;
+      color: $text-color;
+      padding: 15px 30px;
+      text-decoration: none;
+      font-size: 1rem;
+      text-align: center;
+      border-radius: 25px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: lighten($accent-color, 10%);
+      }
+    }
+
+    .top-gaming-products__link {
+      font-size: 1rem;
+      color: $accent-color;
+      text-decoration: none;
+      align-self: center;
+
+      &:hover {
+        color: lighten($accent-color, 10%);
+      }
+    }
+  }
+
+  &__image {
+    max-width: 45%;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .top-gaming-products {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &__content {
+      max-width: 100%;
+      margin-bottom: 40px;
+    }
+
+    &__features {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &__image {
+      max-width: 100%;
+    }
+  }
+}

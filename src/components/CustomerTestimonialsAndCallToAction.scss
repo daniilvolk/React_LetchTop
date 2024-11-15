@@ -1,0 +1,160 @@
+// CustomerTestimonialsAndCallToAction.scss
+
+// General styling
+$primary-color: #ffffff;
+$secondary-color: #ad3333;
+$background-color: #000000;
+$text-color: #bfbfbf;
+$highlight-color: #f44336;
+$button-color: #ad3333;
+$button-hover-color: #f44336;
+
+.customer-testimonials {
+  background-color: $background-color;
+  color: $primary-color;
+  padding: 40px;
+}
+
+.customer-testimonials__title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.customer-testimonials__description {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: $text-color;
+}
+
+.customer-testimonials__reviews {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.review {
+  background-color: $background-color;
+  padding: 20px;
+  border-radius: 8px;
+  width: 48%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.review__stars {
+  color: $highlight-color;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.review__text {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: $primary-color;
+}
+
+.review__info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.review__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.review__details {
+  color: $primary-color;
+}
+
+.review__name {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.review__role {
+  font-size: 0.8rem;
+  color: $text-color;
+}
+
+.review__platform {
+  margin-left: auto;
+  width: 24px;
+  height: 24px;
+}
+
+// Call to Action Section
+.call-to-action {
+  background-color: $secondary-color;
+  padding: 40px;
+  color: $primary-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.call-to-action__logo {
+  width: 50px;
+  margin-right: auto;
+}
+
+.call-to-action__center {
+  flex: 1;
+  text-align: center;
+}
+
+.call-to-action__title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: $primary-color;
+}
+
+.call-to-action__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  margin-left: auto;
+}
+
+.call-to-action__description {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: $primary-color;
+}
+
+.call-to-action__buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.call-to-action__button {
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 1rem;
+  text-decoration: none;
+  color: $primary-color;
+  border: 1px solid $button-color;
+  transition: background-color 0.3s ease;
+}
+
+.call-to-action__button--explore {
+  background-color: $button-color;
+}
+
+.call-to-action__button--explore:hover {
+  background-color: $button-hover-color;
+}
+
+.call-to-action__button--contact {
+  background-color: transparent;
+}
+
+.call-to-action__button--contact:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}

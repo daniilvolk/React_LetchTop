@@ -1,0 +1,105 @@
+// Основные переменные
+$background-color: #100F0F;
+$text-color: #FFFFFF;
+$accent-color: #FF1202;
+$nav-background-color: #181820;
+$secondary-text-color: #BBBBBB;
+
+.custom-pc-building {
+  padding: 100px 5%;
+  background-color: $nav-background-color;
+  color: $text-color;
+  text-align: left;
+
+  &__title {
+    font-size: 2.8rem;
+    margin-bottom: 50px;
+    font-weight: bold;
+    color: $text-color;
+  }
+
+  &__grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    background-color: transparent;
+    padding: 0;
+    max-width: 30%;
+    flex: 1;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-10px);
+    }
+  }
+
+  &__icon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 20px;
+    color: $accent-color;
+  }
+
+  &__item-title {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: $text-color;
+  }
+
+  &__item-description {
+    font-size: 1rem;
+    color: $secondary-text-color;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    font-size: 1rem;
+    color: $accent-color;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    display: inline-block;
+    margin-top: 10px;
+
+    &:hover {
+      color: lighten($accent-color, 10%);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-pc-building {
+    padding: 50px 5%;
+
+    &__title {
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+    }
+
+    &__grid {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &__item {
+      max-width: 100%;
+      padding: 0;
+
+      &__item-title {
+        font-size: 1.4rem;
+      }
+
+      &__item-description {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
